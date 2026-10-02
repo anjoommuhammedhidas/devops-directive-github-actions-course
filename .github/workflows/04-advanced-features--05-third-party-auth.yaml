@@ -21,7 +21,8 @@ jobs:
       id-token: write # This is required for requesting the JWT for OIDC auth to AWS
     steps:
       - name: "Configure AWS Credentials - Action for GitHub Actions"
-        uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a # v4.3.1
+        uses: aws-actions/configure-aws-credentials@7474bc4690e29a8392af63c5b98e7449536d5c3a
         with:
           aws-region: us-east-2
-          role-to-assume: arn:aws:iam::917774925227:role/github-actions-role
+          role-to-assume: arn:aws:iam::773994910114:role/github-actions-role
+          audience: sts.amazonaws.com
